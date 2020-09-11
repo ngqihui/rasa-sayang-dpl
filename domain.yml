@@ -1,0 +1,74 @@
+session_config:
+  session_expiration_time: 0
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- agree
+- disagree
+- check DA contracts
+- buying via SVP
+- utter_greeting
+responses:
+  utter_greet:
+  - text: Hello! I’m Procurement Chatbot and still in beta testing. I can provide
+      advisory services on how to carry out procurement of your required goods and
+      services. There are few ways to interact with me. Want to see a brief tutorial
+      of what I can do?
+  utter_intro_yes:
+  - text: Awesome! I will guide you through the procurement cycle from Stage 1 to
+      8. You can also access specific stages quickly by using the links at the top.
+  utter_intro_no:
+  - text: "There are 8 stages of the procurement cycle. Please select the procurement\
+      \ stage you are interested in, or you can start from Stage 1 to go through the\
+      \ entire procurement cycle. \nbuttons:  - title: \"Step 1: Establishing Needs\"\
+      \ payload: '/step1'"
+  utter_stage_1:
+  - text: The first step of the procurement process is to establish that there is
+      a genuine need for the procurement. You are encouraged to conduct proper market
+      research (e.g. seeking budgetary quotes) for better product knowledge and market
+      awareness, so as to determine the Estimated Procurement Value (EPV) and adopt
+      suitable sourcing methods thereafter.
+  utter_stage_2_main:
+  - text: 'Demand Aggregation (DA) contracts should be used for: (a) Recurring purchases
+      required on a regular basis (i.e. not one-off purchase), regardless of value;
+      (b) Food catering services (both ad-hoc and recurring); and (c) Services available
+      under the mandatory DA contracts. It is not mandatory to check against DA contracts
+      before buying via Small Value Purchase (SVP), though you can still check it
+      as a means of market survey or for cost benchmarking.'
+  utter_goodbye:
+  - text: Thanks and have a nice day!
+  utter_closing:
+  - text: Do you have any further questions?
+  utter_noanswer:
+  - text: '"Sorry I’m still learning and unable to answer your question. Please rephrase
+      your question or would you like to contact the Procurement Manager?'
+  utter_checkDAcontracts:
+  - text: You can do a search on GeBIZ <https://ngg.intranet.gebiz.gov.sg> for the
+      Whole-of-Government (WOG) DA contracts by typing the relevant keywords of the
+      item in the main search bar. There are WOG DA contracts for food catering, hiring
+      of buses, booking of event venues and comms campaigns etc. You should also check
+      if there are any URA period contracts <https://uranium2.ura.gov.sg/sites/Tools_and_Resources/Corporate/Finance%20and%20Procurement/Pages/URA-Period-Contracts.aspx>
+      that may meet your needs (e.g. printing of corporate materials and subscription
+      services). If applicable, do contact the contract administrator for further
+      details. Refer to the  <a target='_blank' href='https://uranium2.ura.gov.sg/sites/Tools_and_Resources/Corporate/Finance%20and%20Procurement/Documents/Procurement%20Guide/Guide%20on%20Checking%20for%20Demand%20Aggregation%20%28DA%29%20and%20URA%20period%20contracts.pdf'>"Guide
+      on checking for Demand Aggregation (DA) and URA period contracts"</a> for step-by-step
+      guide to check whether your intended procurement is covered under the WOG DA
+      contracts or URA period contracts. Did you manage to find a WOG DA contract
+      or URA period contract that suits your needs?
+  utter_foundandbuyingDAcontract:
+  - text: DA contracts can be in the form of (i) Period Contract or (ii) Framework
+      Agreement  Let me help you to find out which category is relevant to you. For
+      the goods and/or services you require, are the rates fixed or defined for the
+      contractual period?
+  utter_foundandbuyingURAperiodcontract:
+  - text: Please check with the contract administrator on the follow-up actions to
+      engage the contractor.
+  utter_foundbutnotbuyingfromDAorURAperiodcontract:
+  - text: 'Please note that you require good reasons to buy outside the established
+      DA / URA period contracts and address the following in the expenditure paper:
+      (i) Highlight that there is an existing DA / URA period contract; (ii) Justify
+      why you are not using the DA / URA period contract; (iii) Indicate the price
+      differential for awarding own contract (versus leveraging on the established
+      DA / URA period contract)'
+  utter_buyingfromDA_fixed/definedrates:
+  - text: Do you need to call for further quotation?
